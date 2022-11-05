@@ -7,16 +7,26 @@
   </div>
   <div class="wellcome" (click)="goToProfile()">
     <h2>
-      Wellcome, <b>{{ name }}</b>
+      Welcome, <b>{{ name }}</b>
     </h2>
   </div>
 </div>
 
+<div class="content-container">
+  <div class="search-container row-between">
+    <input
+      type="text"
+      class="input"
+      placeholder="Search"
+      [(ngModel)]="search_query"
+    />
+    
+  </div>
 
-
-<div class="posts-container">
-  <div *ngFor="let post of posts; let i = index">
-    <h4>{{ post.title }}</h4>
-    <p>{{ post.body }}</p>
+  <div class="posts-container">
+    <div *ngFor="let post of posts; let i = index">
+      <h4>{{ post.title }}</h4>
+      <p>{{ post.body }}</p>
+    </div>
   </div>
 </div>

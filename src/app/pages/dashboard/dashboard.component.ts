@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   user: User = {} as User;
   name: string = 'Luki';
   posts: Post[] = [];
+  search_query: string = '';
   constructor(
     private router: Router,
     private state: StateService,

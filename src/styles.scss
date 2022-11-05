@@ -293,9 +293,14 @@ svg#clouds {
   }
 }
 
-.body {
+html {
+  box-sizing: border-box;
 }
-
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 .row-between {
   display: flex;
   flex-direction: row;
