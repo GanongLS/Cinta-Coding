@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CintaCodingComponent } from './pages/cinta-coding/cinta-coding.component';
 import { LoginComponent } from './pages/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, CintaCodingComponent, LoginComponent],
+  declarations: [AppComponent, CintaCodingComponent, LoginComponent, DashboardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
