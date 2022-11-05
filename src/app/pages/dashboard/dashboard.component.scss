@@ -36,8 +36,9 @@
 }
 
 .content-container {
-  border: 2px solid red;
+  // border: 2px solid red;
   margin: 16px auto;
+  margin-bottom: 32px;
   width: 60%;
   .posts-container {
     display: flex;
@@ -89,4 +90,28 @@
       margin-top: 2px;
     }
   }
+
+  .pagi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #676767;
+  }
+  .pagination {
+    width: 40%;
+  }
+}
+
+.press-able {
+  // width: 20%;
+  padding: 6px 8px;
+  // margin: 6px 12px;
+  cursor: pointer;
+  // border: 2px solid red;
+}
+
+.act {
+  border-bottom: 1px solid #548ce7;
 }

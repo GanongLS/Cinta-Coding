@@ -70,4 +70,20 @@ export class DashboardComponent implements OnInit, OnDestroy {
   slicePostByPage(page: number) {
     return this.posts.slice((page - 1) * 10, page * 10);
   }
+
+  goToPreviusPage() {
+    if (this.page > 1) {
+      this.page = this.page - 1;
+    }
+  }
+
+  goToNextPage() {
+    if (this.page < this.posts.length / 10) {
+      this.page = this.page + 1;
+    }
+  }
+
+  setActivePage(page: number) {
+    this.page = page;
+  }
 }
