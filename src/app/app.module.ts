@@ -8,10 +8,18 @@ import { AppComponent } from './app.component';
 import { CintaCodingComponent } from './pages/cinta-coding/cinta-coding.component';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PostTitleListComponent } from './pages/dashboard/components/post-title-list/post-title-list.component';
 
 @NgModule({
-  declarations: [AppComponent, CintaCodingComponent, LoginComponent, DashboardComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, CintaCodingComponent, LoginComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    FontAwesomeModule,
+  ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })

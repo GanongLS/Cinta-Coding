@@ -308,6 +308,13 @@ html {
   align-items: center;
 }
 
+.row-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .just-center {
   display: flex;
   flex-direction: row;

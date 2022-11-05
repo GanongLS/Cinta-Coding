@@ -7,7 +7,17 @@ import { User } from './model/user';
   providedIn: 'root',
 })
 export class StateService {
+  users: BehaviorSubject<User[]> = new BehaviorSubject({} as User[]);
   user: BehaviorSubject<User> = new BehaviorSubject({} as User);
   posts: BehaviorSubject<Post[]> = new BehaviorSubject([] as Post[]);
   constructor() {}
+
+  getUserById(userId: number): User {
+    console.log({ userId });
+    let _user = this.users.value.filter((u) => {
+      return u.id == userId;
+    })[0];
+    console.log({ _user });
+    return _user;
+  }
 }

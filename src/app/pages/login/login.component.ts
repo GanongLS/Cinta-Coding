@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       next: (r) => {
         // console.log({ r });
         let userList: User[] = r as User[];
+        this.state.users.next(userList);
         console.log({ userList });
 
         let user: User = userList.filter((u) => {

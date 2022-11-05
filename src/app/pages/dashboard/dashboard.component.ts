@@ -5,6 +5,7 @@ import { DataService } from 'src/app/services/data/data.service';
 import { Post } from 'src/app/services/state/model/post';
 import { User } from 'src/app/services/state/model/user';
 import { StateService } from 'src/app/services/state/state.service';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,11 +13,13 @@ import { StateService } from 'src/app/services/state/state.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit, OnDestroy {
+  faSearch = faSearch;
   subUser: Subscription = new Subscription();
   user: User = {} as User;
   name: string = 'Luki';
   posts: Post[] = [];
   search_query: string = '';
+  page: number = 1;
   constructor(
     private router: Router,
     private state: StateService,
@@ -28,9 +31,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
     this.dataService.getAllPost().subscribe({
       next: (p) => {
-        console.log({ p });
+        // console.log({ p });
         let posts: Post[] = p as Post[];
-        console.log({ posts });
+        // console.log({ posts });
         this.posts = posts;
       },
     });
@@ -62,5 +65,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
   goToProfile() {
     // this.router.navigateByUrl('/login-page');
     console.log('buat halaman profile');
+  }
+
+  slicePostByPage(page: number) {
+    return this.posts.slice((page - 1) * 10, page * 10);
   }
 }

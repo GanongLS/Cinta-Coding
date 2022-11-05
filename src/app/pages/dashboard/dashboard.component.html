@@ -3,9 +3,11 @@
     <h2>Cinta Coding</h2>
   </div>
   <div class="main-title">
-    <h5>Dashboard</h5>
+    <div class="title-container">
+      <h5>Dashboard</h5>
+    </div>
   </div>
-  <div class="wellcome" (click)="goToProfile()">
+  <div class="welcome" (click)="goToProfile()">
     <h2>
       Welcome, <b>{{ name }}</b>
     </h2>
@@ -20,13 +22,12 @@
       placeholder="Search"
       [(ngModel)]="search_query"
     />
-    
+    <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
   </div>
 
   <div class="posts-container">
-    <div *ngFor="let post of posts; let i = index">
-      <h4>{{ post.title }}</h4>
-      <p>{{ post.body }}</p>
+    <div *ngFor="let post of slicePostByPage(page); let i = index">
+      <post-title-list [post]="post"></post-title-list>
     </div>
   </div>
 </div>
