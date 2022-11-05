@@ -1,0 +1,25 @@
+.cinta {
+  // background-color: blue;
+  width: fit-content;
+}
+
+.login-button {
+  padding: 8px 20px;
+  background: linear-gradient(to right, #5ea3ff, #548ce7);
+  cursor: pointer;
+  border-radius: 28px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.greeting-image {
+  width: 94%;
+  object-fit: contain;
+  margin: 32px auto;
+}
