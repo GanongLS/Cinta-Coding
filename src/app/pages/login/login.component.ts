@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     console.log({ username: this.username });
-    this.dataService.getAllUSer(this.username).subscribe({
+    this.dataService.getAllUSer().subscribe({
       next: (r) => {
         // console.log({ r });
         let userList: User[] = r as User[];

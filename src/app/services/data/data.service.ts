@@ -8,9 +8,15 @@ export class DataService {
   headersObj = {};
   constructor(private http: HttpClient) {}
 
-  getAllUSer(username: string) {
+  getAllUSer() {
     const headerObj = { 'Content-Type': 'application/x-www-form-urlencoded' };
     const options = { headers: headerObj };
     return this.http.get('https://jsonplaceholder.typicode.com/users', options);
+  }
+
+  getAllPost() {
+    const headerObj = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    const options = { headers: headerObj };
+    return this.http.get('https://jsonplaceholder.typicode.com/posts', options);
   }
 }

@@ -2,11 +2,21 @@
   <div class="cinta" (click)="goToDashboard()">
     <h2>Cinta Coding</h2>
   </div>
+  <div class="main-title">
+    <h5>Dashboard</h5>
+  </div>
   <div class="wellcome" (click)="goToProfile()">
-    <h2>Wellcome, {{name}}</h2>
+    <h2>
+      Wellcome, <b>{{ name }}</b>
+    </h2>
   </div>
 </div>
 
-<div class="image-container">
-  <img src="../../../assets/images/ntt-greeting.png" alt="" class="greeting-image"/>
+
+
+<div class="posts-container">
+  <div *ngFor="let post of posts; let i = index">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.body }}</p>
+  </div>
 </div>
