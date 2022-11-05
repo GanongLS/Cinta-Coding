@@ -1,0 +1,50 @@
+.container {
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.username {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px;
+  .user-text {
+    font-weight: 700;
+  }
+}
+
+.post-title {
+  width: 100%;
+  display: flex;
+  flex: 6;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  h4 {
+    color: #565656;
+    font-size: 14px;
+    font-weight: 500;
+    // margin: 0px;
+  }
+}
+
+.footer {
+  color: #548ce7;
+  font-size: 16px;
+}
+
+.comment {
+  margin-right: 16px;
+  color: #548ce7;
+}
+
+.c-icon {
+  color: #548ce7;
+  margin-right: 8px;
+}

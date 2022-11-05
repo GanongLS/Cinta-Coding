@@ -19,4 +19,13 @@ export class DataService {
     const options = { headers: headerObj };
     return this.http.get('https://jsonplaceholder.typicode.com/posts', options);
   }
+
+  getAllCommentByPostID(postId: number) {
+    const headerObj = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    const options = { headers: headerObj };
+    return this.http.get(
+      `https://jsonplaceholder.typicode.com/posts/${postId}/comments`,
+      options
+    );
+  }
 }

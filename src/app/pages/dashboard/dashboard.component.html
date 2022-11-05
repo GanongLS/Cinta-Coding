@@ -26,7 +26,10 @@
   </div>
 
   <div class="posts-container">
-    <div *ngFor="let post of slicePostByPage(page); let i = index">
+    <div
+      *ngFor="let post of slicePostByPage(page); let i = index"
+      class="post-title-container"
+    >
       <post-title-list [post]="post"></post-title-list>
     </div>
   </div>

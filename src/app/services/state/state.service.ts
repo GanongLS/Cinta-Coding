@@ -13,11 +13,11 @@ export class StateService {
   constructor() {}
 
   getUserById(userId: number): User {
-    console.log({ userId });
+    // console.log({ userId });
     let _user = this.users.value.filter((u) => {
       return u.id == userId;
     })[0];
-    console.log({ _user });
+    // console.log({ _user });
     return _user;
   }
 }

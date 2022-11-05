@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       next: (p) => {
         // console.log({ p });
         let posts: Post[] = p as Post[];
-        // console.log({ posts });
+        console.log({ posts });
         this.posts = posts;
       },
     });
@@ -59,7 +59,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   goToDashboard() {
-    this.router.navigateByUrl('/dashboard-page');
+    this.router.navigateByUrl('/login-page');
   }
 
   goToProfile() {

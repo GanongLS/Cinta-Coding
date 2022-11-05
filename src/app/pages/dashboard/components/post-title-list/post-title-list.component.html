@@ -1,11 +1,18 @@
-<div class="row-start">
-  <div>
-    <p>
-      {{ user.username }}
-    </p>
+<div class="row-start container">
+  <div class="username">
+    <p class="user-text">{{ user.username }}</p>
   </div>
-  <div>
-    <h4>{{ post.title }}</h4>
-    <p>{{ post.body }}</p>
+  <div class="post-title">
+    <div>
+      <h4>{{ post.title }}</h4>
+    </div>
+
+    <div class="row-start footer">
+      <div class="row-start comment">
+        <fa-icon [icon]="commentIcon" class="c-icon"></fa-icon>
+        <p>{{ comments.length }}</p>
+      </div>
+      <p>Detail</p>
+    </div>
   </div>
 </div>
