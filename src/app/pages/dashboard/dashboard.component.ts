@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   name: string = 'Luki';
   posts: Post[] = [];
   post: Post = {} as Post;
+  post_comments: Comment[] = [];
   search_query: string = '';
   page: number = 1;
 
@@ -92,7 +93,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   openDetail(ev: any, post: Post) {
     this.post = post;
+    console.log({ ev });
     this.state.post.next(post);
     this.main_content = 'Post';
+    this.post_comments = [...ev.comments];
   }
 }

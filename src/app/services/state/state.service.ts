@@ -11,6 +11,7 @@ export class StateService {
   user: BehaviorSubject<User> = new BehaviorSubject({} as User);
   posts: BehaviorSubject<Post[]> = new BehaviorSubject([] as Post[]);
   post: BehaviorSubject<Post> = new BehaviorSubject({} as Post);
+  post_comments: BehaviorSubject<any> = new BehaviorSubject({});
 
   constructor() {}
 

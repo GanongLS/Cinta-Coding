@@ -24,7 +24,7 @@ export class PostTitleListComponent implements OnInit, OnChanges {
   @Output() detail = new EventEmitter();
   user: User = {} as User;
   commentIcon = faCommentDots;
-  comments: any[] = [];
+  comments: Comment[] = [];
 
   constructor(private state: StateService, private dataService: DataService) {}
 
@@ -35,7 +35,8 @@ export class PostTitleListComponent implements OnInit, OnChanges {
       this.dataService.getAllCommentByPostID(this.post.id).subscribe({
         next: (cs) => {
           console.log({ cs });
-          this.comments = cs as any[];
+          let comments: Comment[] = cs as Comment[];
+          this.comments = comments;
         },
       });
     }
@@ -44,6 +45,8 @@ export class PostTitleListComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {}
 
   openDetail(e: any) {
-    this.detail.emit(e);
+    let ev = { e, comments: [...this.comments] };
+    this.detail.emit(ev);
+    this.state.post_comments.next([...this.comments]);
   }
 }

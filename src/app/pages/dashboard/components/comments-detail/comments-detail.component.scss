@@ -16,7 +16,7 @@
   }
 }
 
-.post-container {
+.post {
   width: 100%;
   display: flex;
   flex: 6;
@@ -49,14 +49,4 @@
 .c-icon {
   color: #548ce7;
   margin-right: 8px;
-}
-
-.comments-container {
-  width: 100%;
-  display: flex;
-  flex: 6;
-  flex-shrink: 0;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
