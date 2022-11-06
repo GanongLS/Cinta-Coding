@@ -1,5 +1,4 @@
 .container {
-  align-items: flex-start;
   width: 100%;
   margin-bottom: 16px;
 }
@@ -17,7 +16,7 @@
   }
 }
 
-.post-title {
+.post {
   width: 100%;
   display: flex;
   flex: 6;
@@ -27,19 +26,21 @@
   align-items: flex-start;
 
   h4 {
-    color: #565656;
+    color: #454545;
     font-size: 14px;
     font-weight: 500;
-    // margin: 0px;
+    margin-bottom: 16px;
+  }
+  .post {
+    color: #787878;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 16px;
   }
 }
 
-.footer {
-  color: #548ce7;
-  font-size: 16px;
-}
-
 .comment {
+  font-size: 14px;
   margin-right: 16px;
   color: #548ce7;
 }
@@ -47,9 +48,4 @@
 .c-icon {
   color: #548ce7;
   margin-right: 8px;
-}
-
-.detail {
-  padding: 6px 12px;
-  cursor: pointer;
 }

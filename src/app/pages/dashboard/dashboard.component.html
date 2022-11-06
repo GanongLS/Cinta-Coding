@@ -4,7 +4,7 @@
   </div>
   <div class="main-title">
     <div class="title-container">
-      <h5>Dashboard</h5>
+      <h5>{{ main_content }}</h5>
     </div>
   </div>
   <div class="welcome" (click)="goToProfile()">
@@ -14,7 +14,7 @@
   </div>
 </div>
 
-<div class="content-container">
+<div class="content-container" *ngIf="main_content == 'Dashboard'">
   <div class="search-container row-between">
     <input
       type="text"
@@ -30,7 +30,10 @@
       *ngFor="let post of slicePostByPage(page); let i = index"
       class="post-title-container"
     >
-      <post-title-list [post]="post"></post-title-list>
+      <post-title-list
+        [post]="post"
+        (detail)="openDetail($event, post)"
+      ></post-title-list>
     </div>
   </div>
 
@@ -61,5 +64,14 @@
         <p>Next</p>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="content-container" *ngIf="main_content == 'Post'">
+  <div class="posts-container">
+    <post-detail
+      [post]="post"
+      (detail)="openDetail($event, post)"
+    ></post-detail>
   </div>
 </div>

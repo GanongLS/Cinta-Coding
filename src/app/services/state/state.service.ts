@@ -10,6 +10,8 @@ export class StateService {
   users: BehaviorSubject<User[]> = new BehaviorSubject({} as User[]);
   user: BehaviorSubject<User> = new BehaviorSubject({} as User);
   posts: BehaviorSubject<Post[]> = new BehaviorSubject([] as Post[]);
+  post: BehaviorSubject<Post> = new BehaviorSubject({} as Post);
+
   constructor() {}
 
   getUserById(userId: number): User {

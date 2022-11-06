@@ -18,8 +18,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
   user: User = {} as User;
   name: string = 'Luki';
   posts: Post[] = [];
+  post: Post = {} as Post;
   search_query: string = '';
   page: number = 1;
+
+  main_content: string = 'Dashboard';
   constructor(
     private router: Router,
     private state: StateService,
@@ -85,5 +88,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   setActivePage(page: number) {
     this.page = page;
+  }
+
+  openDetail(ev: any, post: Post) {
+    this.post = post;
+    this.state.post.next(post);
+    this.main_content = 'Post';
   }
 }

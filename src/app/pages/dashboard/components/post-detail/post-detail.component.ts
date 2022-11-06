@@ -7,19 +7,19 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import { isEmpty } from 'lodash';
+import { DataService } from 'src/app/services/data/data.service';
 import { Post } from 'src/app/services/state/model/post';
 import { User } from 'src/app/services/state/model/user';
 import { StateService } from 'src/app/services/state/state.service';
-import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
-import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
-  selector: 'post-title-list',
-  templateUrl: './post-title-list.component.html',
-  styleUrls: ['./post-title-list.component.scss'],
+  selector: 'post-detail',
+  templateUrl: './post-detail.component.html',
+  styleUrls: ['./post-detail.component.scss'],
 })
-export class PostTitleListComponent implements OnInit, OnChanges {
+export class PostDetailComponent implements OnInit, OnChanges {
   @Input('post') post: Post = {} as Post;
   @Output() detail = new EventEmitter();
   user: User = {} as User;

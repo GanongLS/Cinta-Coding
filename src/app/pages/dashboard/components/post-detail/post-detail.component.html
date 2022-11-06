@@ -1,0 +1,16 @@
+<div class="row-start container">
+  <div class="username">
+    <p class="user-text">{{ user.username }}</p>
+  </div>
+  <div class="post">
+    <div>
+      <h4>{{ post.title }}</h4>
+      <p class="post">{{ post.body }}</p>
+    </div>
+
+    <div class="row-start comment">
+      <fa-icon [icon]="commentIcon" class="c-icon"></fa-icon>
+      <p>{{ comments.length }}</p>
+    </div>
+  </div>
+</div>
