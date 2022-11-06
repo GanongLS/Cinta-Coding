@@ -1,3 +1,8 @@
+<fa-icon
+  [icon]="arrowLeft"
+  class="arrow-icon"
+  (click)="hidePost($event)"
+></fa-icon>
 <div class="row-start container">
   <div class="username">
     <p class="user-text">{{ user.username }}</p>
@@ -23,8 +28,18 @@
   <div class="username">
     <p class="user-text">&nbsp;</p>
   </div>
+
   <div class="comments-container">
-    Asu
-    <comments-detail [post]="post" [comments]="comments"></comments-detail>
+    <div class="row-between title-container">
+      <h4 class="comment-title">All Comments</h4>
+      <p class="hide" (click)="hideComments()">Hide</p>
+    </div>
+
+    <div *ngFor="let comment of comments; let i = index">
+      <comments-detail
+        [comment]="comment"
+        [user_name]="user.username"
+      ></comments-detail>
+    </div>
   </div>
 </div>

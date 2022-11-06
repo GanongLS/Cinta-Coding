@@ -11,42 +11,25 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 8px;
+
   .user-text {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 14px;
   }
 }
 
-.post {
+.comment-container {
   width: 100%;
   display: flex;
-  flex: 6;
+  flex: 3;
   flex-shrink: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 
-  h4 {
-    color: #454545;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 16px;
-  }
-  .post {
+  .comment-body {
     color: #787878;
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 16px;
   }
-}
-
-.comment-icon {
-  font-size: 14px;
-  margin-right: 16px;
-  color: #548ce7;
-  cursor: pointer;
-}
-
-.c-icon {
-  color: #548ce7;
-  margin-right: 8px;
 }

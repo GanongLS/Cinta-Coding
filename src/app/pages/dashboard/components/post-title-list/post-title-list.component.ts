@@ -34,7 +34,7 @@ export class PostTitleListComponent implements OnInit, OnChanges {
       this.user = this.state.getUserById(this.post.userId);
       this.dataService.getAllCommentByPostID(this.post.id).subscribe({
         next: (cs) => {
-          console.log({ cs });
+          // console.log({ cs });
           let comments: Comment[] = cs as Comment[];
           this.comments = comments;
         },

@@ -6,6 +6,7 @@ import { Post } from 'src/app/services/state/model/post';
 import { User } from 'src/app/services/state/model/user';
 import { StateService } from 'src/app/services/state/state.service';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Comment } from 'src/app/services/state/model/comment';
 
 @Component({
   selector: 'app-dashboard',
@@ -97,5 +98,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.state.post.next(post);
     this.main_content = 'Post';
     this.post_comments = [...ev.comments];
+  }
+
+  hideDetail(e: any) {
+    this.main_content = 'Dashboard';
   }
 }
