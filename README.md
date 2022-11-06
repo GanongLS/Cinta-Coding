@@ -1,5 +1,11 @@
 # CintaCoding
 
+This project was created to accomplish test from NTT.
+
+This App being developed by Luki Subandi. He intend to license this App under MIT License.
+
+Fork or clone this repository to your personal repository.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
 
 ## Development server
@@ -25,3 +31,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Libraries Used
+
+There are some libraries that used in this app outside angular. Such as:
+
+1. RXJS [Guidance for RXJS Observable](https://rxjs.dev/guide/observable)
+2. FontAwesome [Guidance for Font Awesome](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+3. Lodash [Guidance for Lodash](https://github.com/lodash/lodash)
+
+## Further development
+
+There is a lot feature that could be developed from this App. The Author intended to upgrade this in near future. Author really eager to hear PR from you.
+
+regards,
+
+Luki Subandi
