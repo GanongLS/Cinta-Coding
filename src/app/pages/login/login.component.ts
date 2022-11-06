@@ -21,18 +21,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin() {
-    console.log({ username: this.username });
+    // console.log({ username: this.username });
     this.dataService.getAllUSer().subscribe({
       next: (r) => {
         // console.log({ r });
         let userList: User[] = r as User[];
         this.state.users.next(userList);
-        console.log({ userList });
+        // console.log({ userList });
 
         let user: User = userList.filter((u) => {
           return u.username == this.username;
         })[0];
-        console.log({ user });
+        // console.log({ user });
         if (!isEmpty(user)) {
           this.goToDashboard();
           this.state.user.next(user);

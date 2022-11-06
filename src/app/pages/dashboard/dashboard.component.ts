@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   user: User = {} as User;
   name: string = 'Luki';
   posts: Post[] = [];
+  searched_posts: Post[] = [];
   post: Post = {} as Post;
   post_comments: Comment[] = [];
   search_query: string = '';
@@ -38,8 +39,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
       next: (p) => {
         // console.log({ p });
         let posts: Post[] = p as Post[];
-        console.log({ posts });
+        // console.log({ posts });
         this.posts = posts;
+        this.searched_posts = posts;
       },
     });
   }
@@ -74,7 +76,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   slicePostByPage(page: number) {
-    return this.posts.slice((page - 1) * 10, page * 10);
+    return this.searched_posts.slice((page - 1) * 10, page * 10);
   }
 
   goToPreviusPage() {
@@ -84,7 +86,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   goToNextPage() {
-    if (this.page < this.posts.length / 10) {
+    if (this.page < this.searched_posts.length / 10) {
       this.page = this.page + 1;
     }
   }
@@ -95,7 +97,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   openDetail(ev: any, post: Post) {
     this.post = post;
-    console.log({ ev });
+    // console.log({ ev });
     this.state.post.next(post);
     this.main_content = 'Post';
     this.post_comments = [...ev.comments];
@@ -106,6 +108,18 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   onSearch(e: any) {
-    console.log({ e });
+    // console.log({ e });
+    // console.log('buat fungsi searching');
+    let new_posts = this.posts.filter((p) => {
+      let match_user = this.state
+        .getUserById(p.userId)
+        .username.toLowerCase()
+        .includes(e.toLowerCase());
+      let match_title = p.title.toLowerCase().includes(e.toLowerCase());
+      let match_content = p.body.toLowerCase().includes(e.toLowerCase());
+
+      return match_content || match_title || match_user;
+    });
+    this.searched_posts = [...new_posts];
   }
 }

@@ -41,7 +41,7 @@ export class PostDetailComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log({ comments: this.comments });
+    // console.log({ comments: this.comments });
   }
 
   

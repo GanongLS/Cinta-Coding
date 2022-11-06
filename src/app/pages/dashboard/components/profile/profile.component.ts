@@ -32,7 +32,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   stateSubscribe() {
     this.subUser = this.state.user.subscribe({
       next: (u) => {
-        console.log({ u });
+        // console.log({ u });
         this.user = u;
 
         let _user: Pair[] = [

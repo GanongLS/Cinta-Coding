@@ -56,7 +56,7 @@
       </div>
       <div
         class="press-able"
-        *ngIf="page < posts.length / 10"
+        *ngIf="page < searched_posts.length / 10"
         (click)="setActivePage(page + 1)"
       >
         <p>{{ page + 1 }}</p>
