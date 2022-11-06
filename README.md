@@ -42,7 +42,7 @@ There are some libraries that used in this app outside angular. Such as:
 
 ## Further development
 
-There is a lot feature that could be developed from this App. The Author intended to upgrade this in near future. Author really eager to hear PR from you.
+There is a lot feature that could be developed from this App. The Author intended to upgrade this in the near future. Author really eager to hear PR from you.
 
 regards,
 
