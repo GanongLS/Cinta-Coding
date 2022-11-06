@@ -28,4 +28,13 @@ export class DataService {
       options
     );
   }
+
+  getUserById(userId: number) {
+    const headerObj = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    const options = { headers: headerObj };
+    return this.http.get(
+      `https://jsonplaceholder.typicode.com/users/${userId}`,
+      options
+    );
+  }
 }

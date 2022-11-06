@@ -69,7 +69,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   goToProfile() {
     // this.router.navigateByUrl('/login-page');
-    console.log('buat halaman profile');
+    // console.log('buat halaman profile');
+    this.main_content = 'Profile';
   }
 
   slicePostByPage(page: number) {
@@ -102,5 +103,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   hideDetail(e: any) {
     this.main_content = 'Dashboard';
+  }
+
+  onSearch(e: any) {
+    console.log({ e });
   }
 }

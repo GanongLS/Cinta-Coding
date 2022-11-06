@@ -1,0 +1,19 @@
+<fa-icon
+  [icon]="arrowLeft"
+  class="arrow-icon"
+  (click)="backToDashboard($event)"
+></fa-icon>
+<div class="container">
+  <div
+    class="row-start inner-container"
+    *ngFor="let display of user_display; let i = index"
+  >
+    <div class="row-between title">
+      <p>{{ display.title }}</p>
+      <p>:&nbsp;</p>
+    </div>
+    <div class="value">
+      <p>{{ display.value }}</p>
+    </div>
+  </div>
+</div>

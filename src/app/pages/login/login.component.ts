@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
         let user: User = userList.filter((u) => {
           return u.username == this.username;
         })[0];
+        console.log({ user });
         if (!isEmpty(user)) {
           this.goToDashboard();
           this.state.user.next(user);

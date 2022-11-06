@@ -21,6 +21,7 @@
       class="input"
       placeholder="Search"
       [(ngModel)]="search_query"
+      (ngModelChange)="onSearch($event)"
     />
     <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
   </div>
@@ -75,4 +76,8 @@
       [comments]="post_comments"
     ></post-detail>
   </div>
+</div>
+
+<div class="content-container" *ngIf="main_content == 'Profile'">
+  <profile (hide)="hideDetail($event)"></profile>
 </div>
